@@ -1,0 +1,6 @@
+# dsh-nagi-skills bundle patch: mount the Nagi Studio skill provider into the
+# Host skill registry. The row is Host-plane, so every agent preset's scope
+# chain merges the four skills it registers.
+- insert:
+    - id: nagi-skills-dsh
+      name: 'dsh-nagi-skills'

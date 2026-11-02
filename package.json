@@ -1,0 +1,53 @@
+{
+  "name": "dsh-nagi-skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nagi Studio 的 grill、architect、prove-it、de-slop 四个 skill，作为零依赖的 DeepSeek Harness Host 插件提供给所有会话。",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "skills",
+    "nagi-studio",
+    "grill",
+    "architect",
+    "prove-it",
+    "de-slop"
+  ],
+  "author": {
+    "name": "Nagi Studio",
+    "url": "https://github.com/nagi-studio"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "test",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "dsh.plugin.json",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.5"
+  },
+  "scripts": {
+    "test": "node --test test/provider.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
